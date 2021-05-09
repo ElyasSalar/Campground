@@ -1,0 +1,10 @@
+<%- include ('header') %>
+    <form action="/campgrounds/<%= camps._id %>/comment" method="POST">
+        <h1 style="text-align: center; margin-top: 7%;">Add your comment to <%= camps.name %></h1>
+        <div class="auth2">
+            <label for="in2" class="input-group-text">Comment</label>
+            <textarea name="comment" class="form-control" id="in2" rows="3" required></textarea>
+            <button type="submit" style="margin-top: 2%; width:100%;" class="btn btn-outline-primary">Submit</button>
+        </div>
+    </form>
+<%- include ('footer') %>

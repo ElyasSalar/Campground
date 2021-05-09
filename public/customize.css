@@ -1,0 +1,96 @@
+body{
+	font-family: 'Nizar Ruqaa', Tahoma, Geneva, Verdana, sans-serif;
+}
+.info{
+	color: gray;
+	text-decoration: underline;
+}
+.desc{
+  	color: rgb(77, 77, 77)
+}
+.auth1{
+  	margin: 3% 30% 0 30% !important;
+}
+.auth2{
+  	margin: 2% 30% 0 30% !important;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+.card{
+	width: 100%;
+}
+.card-title{
+	color: rgb(5, 85, 206);
+}
+.index-card{
+	width: 100%;
+	height: 220px;
+}
+.form-cont{
+	margin: 7% 30% 0 30%;
+}
+#price{
+	color: rgb(53, 174, 223);
+	font-size: 20px;
+}
+#price-in-index{
+	margin: auto 0;
+}
+#each-card{
+	transition: box-shadow .3s;
+}
+#each-card:hover{
+	box-shadow: 0px 0px 15px rgba(126, 91, 46, .5);
+}
+#yelpCampLogo{
+	font-family: serif;
+}
+.top-photo{
+	display: block;
+	background-image: url(https://images.unsplash.com/photo-1568401900627-cbe151ba3455?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1049&q=80);
+	width: 100%;
+	height: 300px;
+	position: absolute;
+    top: auto;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+}
+.top-photo .container{
+	text-align: center;
+	padding-top: 5%;
+	text-shadow: 0 0 5px black;
+	color: white;
+}
+#camp-name{
+	font-family: 'Monotype Corsiva', Tahoma, Geneva, Verdana, sans-serif;
+}
+.top-photo .container a{
+	padding: 10px 80px 10px 80px;
+    border-top: rgba(27, 27, 27, 1) solid 2px;
+    border-bottom: rgba(27, 27, 27, 1) solid 2px;
+    border-left: rgba(27, 27, 27, 0) solid 2px;
+    border-right: rgba(27, 27, 27, 0) solid 2px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+	text-decoration: none;
+    background-color: rgba(126, 91, 46, .2);
+    box-shadow: 0px 0px 0px black;
+    transition: border-right .4s, border-left .4s, border-bottom .4s, border-top .4s, background-color 2s, box-shadow .3s;
+}
+.top-photo .container a:hover{
+	color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-left: rgba(27, 27, 27, 1) solid 4px;
+    border-right: rgba(27, 27, 27, 1) solid 4px;
+    border-top: rgba(27, 27, 27, 0) solid 2px;
+    border-bottom: rgba(27, 27, 27, 0) solid 2px;
+    background-color: rgba(126, 91, 46, .5);
+    box-shadow: 0px 0px 10px black;
+}
+.top-cont{
+	height: 300px;
+}

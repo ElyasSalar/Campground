@@ -1,0 +1,16 @@
+<%- include ('header') %>
+<div class="form-cont">
+    <h1 class="header">Register</h1>
+    <form action="/register", method="POST">
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" placeholder="Username" autofocus required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" placeholder="Password" required>
+        </div>
+        <button class="btn btn-dark btn-block" type="submit">Register</button>
+    </form>
+</div>
+<%- include ('footer') %>

@@ -1,0 +1,55 @@
+<%- include ('header') %>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-inline-block">
+                <p class="lead">YelpCamp</p>
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+            </div>
+            <div class="col-md-9">
+                <div class="card">
+                    <img src="<%= camps.image %>" class="card-img-top">
+                    <div class="card-body">
+                        <p><small class="text-muted">posted by <%= camps.author.username %></small></p>
+                        <div class="flex">
+                            <h5 class="card-title"><%= camps.name %></h5>
+                            <h5>$<%= camps.price %>/night</h5>
+                        </div>
+                        <p><%= camps.description %></p>
+                        <hr>
+                        <% if(currentUser.id == camps.author._id){ %>
+                            <div class="d-grid gap-2 d-md-flex justify-content-between">
+                                <a href="/campgrounds/<%= camps._id %>/update" class="btn btn-secondary">Edit</a>
+                                <a href="/campgrounds/<%= camps._id %>/delete" class="btn btn-danger">Delete</a>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="container bg-light border border-5 mt-5 p-4">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="/campgrounds/<%= camps._id %>/comment/new" class="btn btn-info">Comment</a>
+                    </div>
+                    <hr>
+                    <% camps.comments.forEach(function(comment){ %>
+                    <div class="row justify-content-between">
+                        <div class="col-3">
+                            <h5><%= comment.author.username %></h5>
+                        </div>
+                        <div class="col-3">
+                            <div class="text-right">10 day ago</div>
+                        </div>
+                    </div>
+                    <div class="row ml-1">
+                        <p><%= comment.comment %></p>
+                    </div>
+                    <% if(currentUser.id == comment.author._id){ %>
+                        <a href="/campgrounds/<%= camps._id %>/<%= comment._id %>/comment/edit" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="/campgrounds/<%= camps._id %>/<%= comment._id %>/comment/delete" class="btn btn-danger btn-sm">Delete</a>
+                    <% } %>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include ('footer') %>

@@ -1,0 +1,33 @@
+<%- include ("header") %>
+<div class="container">
+    <div class="top-cont">
+        <div class="top-photo">
+            <div class="container">
+                <h1>Campgrounds</h1>
+                <p>Best places to travel and reserve before you go, plan your trip with much more choice and freedom.</p>
+                <a href="/campgrounds/new">Add new campground</a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="display:flex; flex-wrap:wrap;">
+        <%camps.forEach(function(camp){%>
+            <div class="col-12 col-md-6 col-lg-4 mt-4">
+                <div class="card border border-5 bg-light" id="each-card">
+                    <img class="card-img-top index-card" src='<%=camp.image%>'>
+                    <div class="caption p-3">
+                        <h3 id="camp-name"><%=camp.name%></h3>
+                        <h6>
+                            <span><%= camp.description.substring(0,70) %>... </span>
+                            <hr>
+                            <div class="flex">
+                                <p id="price-in-index"><small>$</small><span id="price"><%= camp.price %></span><small>/night</small></p>
+                                <a href="/campgrounds/<%= camp._id %>" class='btn btn-info'>More info</a>
+                            </div>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        <%});%>
+    </div>
+</div>
+<%- include ("footer") %>
